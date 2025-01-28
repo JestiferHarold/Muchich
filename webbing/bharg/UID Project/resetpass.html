@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url(IMG_1325.JPG);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .reset-password-container {
+      width: 400px;
+      padding: 30px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .reset-password-container h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .reset-password-container p {
+      font-size: 14px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      padding: 15px 20px;
+      font-size: 16px;
+      color: #fff;
+      outline: none;
+    }
+
+    .input-box input::placeholder {
+      color: white;
+    }
+
+    .input-box i {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .reset-password-container .btn {
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .reset-password-container .btn:hover {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="reset-password-container">
+    <h1>Reset Password</h1>
+    <p>Enter your new password below.</p>
+    <div class="input-box">
+      <input type="password" placeholder="New Password" id="new-password">
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <div class="input-box">
+      <input type="password" placeholder="Confirm New Password" id="confirm-password">
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <button class="btn" onclick="handleResetPassword()">Reset Password</button>
+  </div>
+
+  <script>
+    function handleResetPassword() {
+      const newPassword = document.getElementById('new-password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (!newPassword || !confirmPassword) {
+        alert("Please fill out both password fields.");
+        return;
+      }
+
+      if (newPassword !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      alert("Password reset successful! Redirecting to login...");
+      window.location.href = "login.html"; // Redirect to the login page
+    }
+  </script>
+</body>
+</html>

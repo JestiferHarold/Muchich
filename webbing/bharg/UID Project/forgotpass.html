@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+  <div class="forgot-password-container">
+    <h1>Forgot Password</h1>
+    <p>Enter your registered email to reset your password.</p>
+    <div class="input-box">
+      <input type="email" placeholder="Email" id="email">
+      <i class='bx bxs-envelope'></i>
+    </div>
+    <div class="otp-box">
+      <div class="input-box">
+        <input type="text" placeholder="Enter OTP" id="otp">
+        <i class='bx bxs-key'></i>
+      </div>
+    </div>
+    <button class="btn" onclick="handleForgotPassword()">Send OTP</button>
+  </div>
+
+  <script>
+    let otpSent = false;
+
+    function handleForgotPassword() {
+      if (!otpSent) {
+        const email = document.getElementById('email').value;
+        if (!email) {
+          alert("Please enter your email address.");
+          return;
+        }
+        document.querySelector('.otp-box').style.display = 'block';
+        document.querySelector('.btn').textContent = "Confirm OTP";
+        otpSent = true;
+        alert("OTP sent to your email!"); // Simulate OTP send action
+      } else {
+        const otp = document.getElementById('otp').value;
+        if (!otp) {
+          alert("Please enter the OTP.");
+          return;
+        }
+        window.location.href = "resetpass.html"; // Redirect to the reset password page
+      }
+    }
+  </script>
+</body>
+</html>

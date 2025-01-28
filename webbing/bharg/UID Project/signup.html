@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Podham..!!!</h1>
+    <p>Sign up to get started</p>
+    <div class="input-box">
+      <input type="text" placeholder="Full Name" required>
+      <i class='bx bxs-user'></i>
+    </div>
+    <div class="input-box">
+      <input type="email" placeholder="Email" required>
+      <i class='bx bxs-envelope'></i>
+    </div>
+    <div class="input-box">
+      <input type="password" placeholder="Password" required>
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <div class="input-box">
+        <input type="password" placeholder="Re-enter Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+    <div class="otp-box">
+      <div class="input-box">
+        <input type="text" placeholder="Enter OTP">
+        <i class='bx bxs-key'></i>
+      </div>
+    </div>
+    <button class="btn" onclick="handleSignup()">Sign Up</button>
+  </div>
+
+  <script>
+    let otpShown = false; 
+
+    function handleSignup() {
+      if (!otpShown) {
+       
+        document.querySelector('.otp-box').style.display = 'block';
+        otpShown = true;
+      } else {
+       alert("Signup successful! Redirecting...");
+        window.location.href = "login.html"; 
+      }
+    }
+  </script>
+</body>
+</html>

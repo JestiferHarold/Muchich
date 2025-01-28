@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 8px;
+    }
+    th {
+      background-color: #8DC63F;
+      color: white;
+    }
+    .highlight {
+      background-color: #00B0F0;
+      color: white;
+    }
+    .interval {
+      background-color: #D9EAD3;
+      font-weight: bold;
+    }
+    .header-info {
+      text-align: left;
+      font-weight: bold;
+      background-color: #F4F4F4;
+    }
+    .theory-header {
+      background-color: #FFD966;
+      font-weight: bold;
+    }
+    .no-border {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">TIME TABLE</h2>
+
+  <!-- Header Information -->
+  <table>
+    <tr>
+      <td class="header-info" colspan="3">Dept: CSE</td>
+      <td class="header-info" colspan="2">Semester: II</td>
+      <td class="header-info" colspan="2">Class: B.Tech CSE</td>
+      <td class="header-info" colspan="3">Section: C</td>
+    </tr>
+    <tr>
+      <td class="header-info" colspan="5">Class Advisors: Ms. G Radhika, Dr. N Radhika</td>
+      <td class="header-info" colspan="5">Mail ID: g_radhika@cb.amrita.edu</td>
+    </tr>
+  </table>
+
+  <!-- Timetable -->
+  <table>
+    <tr>
+      <th>Time/Day</th>
+      <th>SLOT 1<br>8:00 am - 8:50 am</th>
+      <th>SLOT 2<br>8:50 am - 9:40 am</th>
+      <th>SLOT 3<br>9:40 am - 10:30 am</th>
+      <th colspan="2">Interval Break</th>
+      <th>SLOT 4<br>10:45 am - 11:35 am</th>
+      <th>SLOT 5<br>11:35 am - 12:25 pm</th>
+      <th>SLOT 6<br>12:25 pm - 1:15 pm</th>
+      <th colspan="2">Lunch Break</th>
+      <th>SLOT 7<br>1:15 pm - 2:05 pm</th>
+    </tr>
+    <tr>
+      <td>Monday</td>
+      <td>23CSE111</td>
+      <td>23MAT117</td>
+      <td></td>
+      <td class="highlight" colspan="2">Break</td>
+      <td>23MAT116</td>
+      <td>23PHY115</td>
+      <td>Mentoring<br>Ms. Radhika</td>
+      <td class="highlight" colspan="2">Lunch Break</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>23MAT117</td>
+      <td>23MAT117</td>
+      <td></td>
+      <td class="highlight" colspan="2">Break</td>
+      <td>22ADM113</td>
+      <td>23CSE113</td>
+      <td></td>
+      <td class="highlight" colspan="2">Lunch Break</td>
+      <td>23MAT116</td>
+    </tr>
+    <!-- Add more rows for other days -->
+  </table>
+
+  <!-- Course Details -->
+  <h3>Theory</h3>
+  <table>
+    <tr class="theory-header">
+      <th>Course Code</th>
+      <th>Course Name</th>
+      <th>Faculty</th>
+      <th>Co-teaching Faculty</th>
+      <th>Venue</th>
+    </tr>
+    <tr>
+      <td>23MAT116</td>
+      <td>Discrete Mathematics</td>
+      <td>Dr. S. Santhakumar</td>
+      <td></td>
+      <td>ABIII - SF - D301</td>
+    </tr>
+    <tr>
+      <td>23MAT117</td>
+      <td>Linear Algebra</td>
+      <td>Dr. Poonguzali G</td>
+      <td></td>
+      <td>ABIII - SF - D301</td>
+    </tr>
+  </table>
+</body>
+</html>
