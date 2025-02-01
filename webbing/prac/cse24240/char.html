@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url();
+            background-color: #cccccc;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 75%;
+        }
+        .responsive-iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 20%;
+            height: 20%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        responsive-iframe
+    </h2>
+    <h3>
+        Maintain aspect 4:3
+    </h3>
+    <p>
+        Resize the window to see the effect.
+    </p>
+    <div class = "container">
+        <iframe class = "responsive-iframe" src = "bird2.mp4"></iframe>
+    </div>
+</body>
+</html>
