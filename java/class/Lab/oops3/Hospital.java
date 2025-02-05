@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 final class Patient {
 	
 	private String patientName;
@@ -57,5 +59,11 @@ final class Department {
 		return departmentName;
 	}
 
-	public
+	public void addPatient(Scanner prompt) {
+	}
+
+}
+
+final public class Hospital {
+
  
