@@ -5,7 +5,7 @@ solid pyramid
 			vertex 1.0 1.0 0.0
 			vertex 1.0 0.0 0.0
 			vertex 0.0 0.0 0.0
-		endlopp
+		endloop
 	endfacet
 
 	facet normal 0.0 0.0 -1.0
